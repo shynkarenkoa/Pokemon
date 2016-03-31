@@ -1,0 +1,14 @@
+{
+  "name": "gulp-something",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-debug": "2.1.2",
+    "gulp-jade": "1.1.0",
+    "gulp-less": "3.0.5",
+    "gulp-postcss": "6.1.0",
+    "autoprefixer": "6.3.3",
+    "cssnext": "1.8.4",
+    "gulp-connect": "~3.2.1"
+  }
+}
