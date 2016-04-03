@@ -3,9 +3,19 @@ html(lang='en')
   head
     title Pokemons
     meta(charset="utf-8")
-    script(src='./script/test.js')
-    link(rel='stylesheet', type='text/css', href='./css/scriptum.css') 
+    script(src='./script/test.js' defer)
+    link(rel='stylesheet', type='text/css', href='./css/pokemon.css') 
   body
-    div
+    header
+      h1 Pokedex
+    main
+      section.list
+        ul
+          - for (var x = 0; x < 5; x++)
+            li
+              a(href='')
+                img
+      sidebar
+    footer        
     
     

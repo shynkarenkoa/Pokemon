@@ -1,6 +1,41 @@
 ul,
 li,
-a,
-h2 {
+a {
   all: unset;
+}
+body {
+  margin: 25px;
+  min-width: 270px;
+  max-width: 680px;
+}
+h1 {
+  margin: 0;
+}
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+header,
+li {
+  border: solid 1px black;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.list {
+  max-width: 550px;
+}
+li {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 140px;
+  width: 140px;
+  max-height: 140px;
 }
