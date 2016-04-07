@@ -11,11 +11,30 @@ html(lang='en')
     main
       section.list
         ul
-          - for (var x = 0; x < 5; x++)
-            li
-              a(href='')
+          - for (var i = 0; i < 12; i++)
+            li 
+              span(onclick="select(this)")
                 img
       sidebar
-    footer        
+        div
+          img#pic
+          h2 TEST
+          table(cellpadding="5px")
+            mixin tabl(name)
+              tr
+                td(align="center", width="70%")= name
+                td(align="center", id= name)
+            +tabl("Type")
+            +tabl("Attack")
+            +tabl("Defense")
+            +tabl("HP")
+            +tabl("SP Attack")
+            +tabl("SP Defense")
+            +tabl("Speed")
+            +tabl("Weight")
+            +tabl("Total moves") 
+    footer
+      button(onclick="change()") 
+        h2 Load More        
     
     
