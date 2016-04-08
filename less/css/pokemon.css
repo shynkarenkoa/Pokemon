@@ -41,6 +41,7 @@ li {
 }
 .list img {
   margin-top: 9px;
+  margin-left: 10px;
   height: 120px;
   width: 120px;
 }
@@ -48,6 +49,15 @@ span h2 {
   font-size: 16px;
   margin: 0px;
   text-align: center;
+}
+types {
+  display: flex;
+}
+types p {
+  width: 60px;
+  text-align: center;
+  /*border-radius: 5px;*/
+  margin: 5px 5px;
 }
 main {
   display: flex;
