@@ -1,9 +1,9 @@
 doctype html
 html(lang='en')
   head
-    title Pokemons
+    title Pokedex
     meta(charset="utf-8")
-    script(src='./script/test.js' defer)
+    script(src='./script/pokedex.js' defer)
     link(rel='stylesheet', type='text/css', href='./css/pokemon.css') 
   body
     header
@@ -15,6 +15,7 @@ html(lang='en')
             li 
               span(onclick="select(this)")
                 img
+                h2
       sidebar
         div
           img#pic
@@ -28,11 +29,11 @@ html(lang='en')
             +tabl("Attack")
             +tabl("Defense")
             +tabl("HP")
-            +tabl("SP Attack")
-            +tabl("SP Defense")
+            +tabl("SP_Attack")
+            +tabl("SP_Defense")
             +tabl("Speed")
             +tabl("Weight")
-            +tabl("Total moves") 
+            +tabl("Total_moves") 
     footer
       button(onclick="change()") 
         h2 Load More        

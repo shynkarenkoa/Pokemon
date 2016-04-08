@@ -26,6 +26,7 @@ function getData(offset)
         	{
         		images[i].src = `http://pokeapi.co/media/img/${data.objects[i].pkdx_id}.png`
  				links[i].setAttribute("id",data.objects[i].pkdx_id);
+ 				links[i].childNodes[1].innerHTML = data.objects[i].name;
         	}
         	pokemonsData = data;
         	console.log(pokemonsData) ///testing response data
@@ -38,12 +39,28 @@ function getData(offset)
 }
 
 
-function select(id)
+function select(ObjId)
 {
-	console.log(id.getAttribute("id"))
+	var id = ObjId.getAttribute("id");
 	document.querySelector("sidebar").style.visibility="visible";
-	document.querySelector("#pic").src = `http://pokeapi.co/media/img/${id.getAttribute("id")}.png`
 	
+	document.querySelector("#pic").src = `http://pokeapi.co/media/img/${id}.png`
+	pokemonsData.objects.forEach(function(element) 
+	{
+    	if (element.pkdx_id == id)
+    	{
+    		document.querySelector("sidebar h2").innerHTML = element.name + " #" + element.pkdx_id;
+    		document.querySelector("#Type").innerHTML = element.types[0].name;
+    		document.querySelector("#Attack").innerHTML = element.attack;
+    		document.querySelector("#Defense").innerHTML = element.defense;
+    		document.querySelector("#HP").innerHTML = element.hp;
+    		document.querySelector("#SP_Attack").innerHTML = element.sp_atk;
+    		document.querySelector("#SP_Defense").innerHTML = element.sp_def;
+    		document.querySelector("#Speed").innerHTML = element.speed;
+    		document.querySelector("#Weight").innerHTML = element.weight;
+    		document.querySelector("#Total_moves").innerHTML = element.moves.length;
+    	}
+    });
 }
 
 function change()
