@@ -24,7 +24,7 @@ function getData(offset)
         {
         	for (var i = 0; i < 12; i++) ///insert data in span elements
         	{
-        		images[i].src = `http://pokeapi.co/media/img/${data.objects[i].pkdx_id}.png`
+        		images[i].src = `https://pokeapi.co/media/img/${data.objects[i].pkdx_id}.png`
  				    links[i].setAttribute("id",data.objects[i].pkdx_id);
  				    links[i].childNodes[1].innerHTML = data.objects[i].name;
             
