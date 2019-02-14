@@ -10,7 +10,7 @@ getData(part);
 
 function getData(offset)
 {
-	fetch(`http://pokeapi.co/api/v1/pokemon/?offset=${offset}&limit=12`)  
+	fetch(`https://pokeapi.co/api/v1/pokemon/?offset=${offset}&limit=12`)  
   .then(  
     function(response) 
     {  
